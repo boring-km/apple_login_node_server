@@ -22,7 +22,6 @@ app.get('/token', (req, res) => {
 app.post('/callback', bodyParser(), async (req, res) => {
 
   try {
-    console.log( Date().toString() + "GET /auth");
     const response = await auth.accessToken(req.body.code);
     const idToken = jwt.decode(response.id_token);
 
@@ -30,11 +29,12 @@ app.post('/callback', bodyParser(), async (req, res) => {
     user.id = idToken.sub;
 
     if (idToken.email) user.email = idToken.email;
+    console.log("이메일 가리기 하면 암호화 됨")
+    console.log(idToken.email);
     if (req.body.user) {
       const { name } = JSON.parse(req.body.user);
       user.name = name;
     }
-    // console.log();
     res.json(user);
   } catch (ex) {
     console.error(ex);
