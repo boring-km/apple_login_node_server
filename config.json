@@ -1,0 +1,8 @@
+{
+  "client_id": "oauth2login.boringkm.com",
+  "team_id": "팀ID",
+  "key_id": "키ID",
+  "redirect_uri": "https://applelogintest-zgevj.run.goorm.io/callback",
+  "private_key_path": "키 파일 경로",
+  "scope": "name email"
+}
