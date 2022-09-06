@@ -4,3 +4,7 @@
 - 참고 글
   - https://juhi.tistory.com/12
   - https://github.com/ananay/apple-auth-example/blob/master/src/app.js
+
+### App에서 테스트하려면?
+- Android는 그냥 URL만 웹뷰에서 로딩하면 된다.
+- iOS는 네이티브로 풀면 될듯
